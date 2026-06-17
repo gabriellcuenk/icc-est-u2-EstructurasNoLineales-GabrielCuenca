@@ -34,5 +34,13 @@ public class App {
         arbolNumeros.preOrder();
         System.out.println("Pos Order");
         arbolNumeros.posOrder();
+
+        System.out.println("In Order");
+        arbolNumeros.inOrder();
+
+        System.out.println("Por niveles:");
+        
+        System.out.println("Altura: "+arbolNumeros.altura());
+        
     }
 }

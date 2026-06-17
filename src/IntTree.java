@@ -75,8 +75,31 @@ public class IntTree {
 
     }
 
+    public void inOrder(){
+        inOrderRecursivo(root);
+    }
 
-    // inorder
-    // niveles
-    // altura    
+    private void inOrderRecursivo(Node<Integer> actual){
+        if(actual == null)
+            return;
+        inOrderRecursivo(actual.getLeft());
+        System.out.println(actual + " ");
+        inOrderRecursivo(actual.getRight());
+    }
+
+    public int altura(){
+        return alturaRecursivo(root);
+    }
+
+    private int alturaRecursivo(Node<Integer> actual){
+        if(actual == null)
+            return -1;
+        int alturaIzquierda = alturaRecursivo(actual.getLeft());
+        int alturaDerecha = alturaRecursivo(actual.getRight());
+
+        return Math.max(alturaIzquierda, alturaDerecha)+1;
+
+    }
+    
+      
 }
