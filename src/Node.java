@@ -33,6 +33,7 @@ public class Node<T> {
 
     public Node<T> getRight() {
         return right;
+
     }
 
     public void setRight(Node<T> right) {

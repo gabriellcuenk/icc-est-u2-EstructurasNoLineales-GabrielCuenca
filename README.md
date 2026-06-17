@@ -1,18 +1,24 @@
-## Getting Started
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+# Práctica: Árboles
 
-## Folder Structure
+## Datos del Estudiante
+- **Nombre:** Gabriel Cuenca
+- **Curso:** Grupo 3
+- **Fecha:** 17/06/2026
 
-The workspace contains two folders by default, where:
+---
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+## 1. IntTree
+![Descripción de la captura](assets/01-captura-ejemplo.png)
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+**Fecha:** 16/06/2026
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
+**Descripción:** Se realizo un arbol con nodos enteros, ademas de los metodos preorder, posorder, inorder y calcular altura y peso del arbol generado.
 
-## Dependency Management
+---
 
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+## 2. BinaryTree
+![Descripción de la captura](assets/02-captura-ejemplo.png)
+**Fecha:** 17/06/26
+**Descripción:** Se creo la clase de BinaryTree y Person. Se creo un arbol que guarda objetos tipo Personas. En el BinaryTree se hizo que sean datos tipo genericos ademas de implementar validaciones para comparar las Personas por edad y si tienen la misma edad entonces por nombre.
+
