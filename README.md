@@ -21,5 +21,3 @@
 ![Descripción de la captura](assets/02-captura-ejemplo.png)
 **Fecha:** 17/06/26
 **Descripción:** Se creo la clase de BinaryTree y Person. Se creo un arbol que guarda objetos tipo Personas. En el BinaryTree se hizo que sean datos tipo genericos ademas de implementar validaciones para comparar las Personas por edad y si tienen la misma edad entonces por nombre.
-
-## 3. PL 2.2
