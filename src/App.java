@@ -11,7 +11,9 @@ import structures.trees.Ejercicio3; */
 import structures.trees.BinaryTree;
 import structures.node.*;
 import collections.maps.Maps;
-import java.util.Map;
+// import java.util.Map;
+
+import structures.graphs.*;
 
 public class App {
     public static void main(String[] args) throws Exception {
@@ -49,7 +51,9 @@ public class App {
 
         // runSets();
 
-        runMaps();
+        // runMaps();
+
+        runGraphs();
         
     }
 
@@ -113,5 +117,21 @@ public class App {
     private static void runMaps(){
         Maps maps = new Maps();
         maps.construirHashMap();
+    }
+
+    private static void runGraphs(){
+        Graph<String> grafo = new Graph<>();
+        grafo.add("A");
+        grafo.add("B");
+        grafo.add("C");
+        grafo.add("D");
+        grafo.add("J");
+        grafo.addConectionUni("A", "B");
+        grafo.addConectionUni("B", "C");
+        grafo.addConectionUni("B","D");
+        grafo.addConectionUni("C", "A");
+        grafo.addConection("J", "D");
+        grafo.addConection("C", "D");
+        grafo.printGraph();
     }
 }

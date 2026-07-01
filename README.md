@@ -34,3 +34,8 @@ En la clase Contacto creamos variables nombre, apellido y telefono en los cuales
 ![Descripción de la captura](assets/04-captura-ejemplo.png)
 **Fecha:** 29/06/2026
 **Descripción:** Se creo la clase de Maps. Se crearon los metodos para construir tanto un Hash Map como un Tree Hash map, además de un coLinkedHashMaps.
+
+## 5. Grafos
+![Descripción de la captura](assets/05-captura-ejemplo.png)
+**Fecha:** 1/07/2026
+**Descripción:** Se creo la clase de Grafos, y dentro de esta sus metodos tanto para añadir nodos con sus valores y direcciones.
