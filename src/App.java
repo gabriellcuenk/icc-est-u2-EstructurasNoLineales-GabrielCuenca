@@ -13,7 +13,12 @@ import structures.node.*;
 import collections.maps.Maps;
 // import java.util.Map;
 
+import structures.graphs.PathFinder;
+import structures.graphs.PathResult;
+
+
 import structures.graphs.*;
+import structures.graphs.implementations.DFSPathFinder;
 
 public class App {
     public static void main(String[] args) throws Exception {
@@ -53,11 +58,11 @@ public class App {
 
         // runMaps();
 
-        runGraphs();
+        runGraph2();
         
     }
 
-     private static void runSets() {
+    private static void runSets() {
         Sets sets = new Sets();
         //Primera implementacion hashSet
         System.out.println("HashSet:");
@@ -133,5 +138,23 @@ public class App {
         grafo.addConection("J", "D");
         grafo.addConection("C", "D");
         grafo.printGraph();
+    }
+
+    private static void runGraph2(){
+        Graph<String> grafo = new Graph<>();
+        grafo.addConection("A","B");
+        grafo.addConection("A","C");
+        grafo.addConection("B","D");
+        grafo.addConection("C","J");
+        grafo.addConectionUni("D", "E");
+        grafo.addConection("E", "F");
+        grafo.addConectionUni("K", "J");
+
+        DFSPathFinder<String> dfs = new DFSPathFinder<String>();
+        PathResult<String> result = dfs.find(grafo, "A","F");
+        PathResult<String> result2 = dfs.find(grafo,"A","J");
+        PathResult<String> result3 = dfs.find(grafo,"A","K");
+
+        System.out.println(result+"\n"+result2+"\n"+result3);
     }
 }

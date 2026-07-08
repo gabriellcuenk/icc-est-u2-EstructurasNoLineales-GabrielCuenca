@@ -46,4 +46,8 @@ public class Graph<T> {
         }
 
     }
+
+    public Set<Node<T>> getVecino(T data){ 
+        return graph.getOrDefault(new Node<>(data), new HashSet<Node<T>>()); 
+    }
 }
