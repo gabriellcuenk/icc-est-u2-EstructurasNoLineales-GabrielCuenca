@@ -12,13 +12,9 @@ import structures.trees.BinaryTree;
 import structures.node.*;
 import collections.maps.Maps;
 // import java.util.Map;
-
-import structures.graphs.PathFinder;
-import structures.graphs.PathResult;
-
-
 import structures.graphs.*;
 import structures.graphs.implementations.DFSPathFinder;
+import structures.graphs.implementations.BFSPathFinder;
 
 public class App {
     public static void main(String[] args) throws Exception {
@@ -58,7 +54,9 @@ public class App {
 
         // runMaps();
 
-        runGraph2();
+        // runGraph2();
+
+        runGraph3();
         
     }
 
@@ -154,6 +152,24 @@ public class App {
         PathResult<String> result = dfs.find(grafo, "A","F");
         PathResult<String> result2 = dfs.find(grafo,"A","J");
         PathResult<String> result3 = dfs.find(grafo,"A","K");
+
+        System.out.println(result+"\n"+result2+"\n"+result3);
+    }
+
+    private static void runGraph3(){
+        Graph<String> grafo = new Graph<>();
+        grafo.addConection("A","B");
+        grafo.addConection("A","C");
+        grafo.addConection("B","D");
+        grafo.addConection("C","J");
+        grafo.addConectionUni("D", "E");
+        grafo.addConection("E", "F");
+        grafo.addConectionUni("K", "J");
+
+        BFSPathFinder<String> bfs = new BFSPathFinder<String>();
+        PathResult<String> result = bfs.find(grafo, "A","F");
+        PathResult<String> result2 = bfs.find(grafo,"A","J");
+        PathResult<String> result3 = bfs.find(grafo,"A","K");
 
         System.out.println(result+"\n"+result2+"\n"+result3);
     }

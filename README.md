@@ -48,9 +48,17 @@ En la clase Contacto creamos variables nombre, apellido y telefono en los cuales
 
 **Descripción:** Se creo la clase de Grafos, y dentro de esta sus metodos tanto para añadir nodos con sus valores y direcciones.
 
-## 6. Path
+## 6. DFSPathFinder
 ![Descripción de la captura](assets/06-captura-ejemplo.png)
 
 **Fecha:** 08/07/2026
 
-**Descripción:** Se creo la clase de PahtResult, PathFinder y DFSPathFinder para buscar e imprimir el camino que recorre al buscar un nodo en un grafo.
+**Descripción:** Se creo la clase de PahtResult, PathFinder y DFSPathFinder para buscar e imprimir el camino que recorre al buscar un nodo en un grafo explorando todos los vértices.
+
+## 7. BFSPathFinder
+
+![Descripción de la captura](assets/07-captura-ejemplo.png)
+
+**Fecha** 13/07/2026
+
+**Descripción:** Se creo la clase de BFSPathFinder para buscar e imprimer el camino que recorre al buscar un nodo en un grafo explorando nivel por nivel.

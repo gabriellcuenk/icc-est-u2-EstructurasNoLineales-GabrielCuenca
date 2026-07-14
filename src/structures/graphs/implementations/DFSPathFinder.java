@@ -10,15 +10,16 @@ import structures.graphs.PathFinder;
 import structures.graphs.PathResult;
 
 public class DFSPathFinder<T> implements PathFinder<T> {
-    
+
     @Override
-    public PathResult<T> find(Graph<T> graph, T current, T end ){
-        HashSet<Node<T>> visited = new HashSet<>();
-        LinkedHashSet<Node<T>> path = new LinkedHashSet<>();
+    public PathResult<T> find(Graph<T> graph, T current, T end) {
+
+        Set<T> visited = new HashSet<>();
+        Set<T> path = new LinkedHashSet<>();
 
         boolean encontrado = dfs(graph, current, end, visited, path);
 
-        if(!encontrado){
+        if (!encontrado) {
             path.clear();
         }
 
@@ -26,32 +27,31 @@ public class DFSPathFinder<T> implements PathFinder<T> {
     }
 
     private boolean dfs(Graph<T> graph,
-        T current, T end,
-        Set<Node<T>> visited,
-        Set<Node<T>> path){
+                        T current,
+                        T end,
+                        Set<T> visited,
+                        Set<T> path) {
 
-            // caso base
+        visited.add(current);
+        path.add(current);
 
-            Node<T> nC = new Node<T>(current);
-            Node<T> nE = new Node<T>(end);
-
-            visited.add(nC);
-            path.add(nC);
-            if(nC.equals(nE)){
-                return true;
-            }
-
-            for(Node<T> vecino : graph.getVecino(current)){
-                if(!visited.contains(vecino)){
-                    boolean encon = dfs(graph, vecino.getValue(), end, visited, path);
-                    if(encon){
-                        return true;
-                    }
-                }
-            }
-
-            path.remove(current);
-
-            return false;
+        if (current.equals(end)) {
+            return true;
         }
+
+        for (Node<T> vecino : graph.getVecino(current)) {
+
+            if (!visited.contains(vecino.getValue())) {
+
+                if (dfs(graph, vecino.getValue(), end, visited, path)) {
+                    return true;
+                }
+
+            }
+        }
+
+        path.remove(current);
+
+        return false;
+    }
 }
